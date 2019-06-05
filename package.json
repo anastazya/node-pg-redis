@@ -1,0 +1,17 @@
+{
+    "name": "hello-world-node-pg-redis",
+    "version": "1.0.0",
+    "description": "docker-compose up -d",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "~4.17",
+        "knex": "~0.17",
+        "pg": "~7.11",
+        "redis": "~2.8"
+    }
+}
