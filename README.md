@@ -10,8 +10,8 @@ docker-compose up -d
 ```bash
 $ curl localhost:8080
 {
-  "postgres":"healthy",
-  "redis":"healthy"
+  "postgres":"UP",
+  "redis":"UP"
 }
 ```
 
@@ -19,7 +19,7 @@ $ curl localhost:8080
 $ docker-compose kill postgres redis
 $ curl localhost:8080
 {
-  "postgres":"KO",
-  "redis":"KO"
+  "postgres":"DOWN",
+  "redis":"DOWN"
 }
 ```

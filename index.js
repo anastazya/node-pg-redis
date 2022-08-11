@@ -8,8 +8,8 @@ app.get('/', (req, res) => {
     Promise.all([db.ping_pg(), db.ping_redis()])
         .then((health) => {
             res.send({
-                postgres: !!health[0] ? "healthy": "KO",
-                redis: !!health[1] ? "healthy": "KO",
+                postgres: !!health[0] ? "UP": "DOWN",
+                redis: !!health[1] ? "UP": "DOWN",
             });
         });
 });
