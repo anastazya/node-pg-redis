@@ -9,6 +9,8 @@ docker-compose up -d
 
 ```bash
 $ curl localhost:8080
+```
+```json
 {
   "postgres":"UP",
   "redis":"UP"
@@ -18,6 +20,9 @@ $ curl localhost:8080
 ```bash
 $ docker-compose kill postgres redis
 $ curl localhost:8080
+```
+
+```json
 {
   "postgres":"DOWN",
   "redis":"DOWN"

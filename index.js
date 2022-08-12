@@ -14,4 +14,4 @@ app.get('/', (req, res) => {
         });
 });
 
-app.listen(process.env['PORT'], () => console.log(`Example app listening`));
+app.listen(process.env['PORT'], () => console.log(`Monitor app listening`));
