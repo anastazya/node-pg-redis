@@ -1,24 +1,50 @@
+# version: '3'
+
+# services:
+#   postgres:
+#     image: postgres:11
+#     ports:
+#       - 5432:5432
+#     environment:
+#       - POSTGRES_USER=foobar
+#       - POSTGRES_PASSWORD=foobar
+#       - POSTGRES_DB=foobar
+
+#   redis:
+#     image: redis:5
+#     ports:
+#       - 6379:6379
+
+#   app:
+#     image: node:10
+#     ports:
+#       - 8080:8080
+#     environment:
+#       - REDIS_HOST=redis
+#       - REDIS_PASSWORD=
+#       - PG_HOST=postgres
+#       - PG_USER=foobar
+#       - PG_PASS=foobar
+#       - PG_DB=foobar
+#       - PORT=8080
+#     volumes:
+#       - ./:/app
+#     working_dir: /app
+#     command: sh -c 'npm install && node index.js'
+
 version: '3'
-
 services:
-  postgres:
-    image: postgres:11
-    ports:
-      - 5432:5432
-    environment:
-      - POSTGRES_USER=foobar
-      - POSTGRES_PASSWORD=foobar
-      - POSTGRES_DB=foobar
 
-  redis:
-    image: redis:5
-    ports:
-      - 6379:6379
+############################# Apps #############################
 
-  app:
-    image: node:10
+  # Witness App  
+  witness:
+    image: "tomthecat/witness:v0.1"
     ports:
-      - 8080:8080
+     - "8080:8080" 
+    build:
+      context: .
+      dockerfile: "app"
     environment:
       - REDIS_HOST=redis
       - REDIS_PASSWORD=
@@ -27,7 +53,5 @@ services:
       - PG_PASS=foobar
       - PG_DB=foobar
       - PORT=8080
-    volumes:
-      - ./:/app
-    working_dir: /app
-    command: sh -c 'npm install && node index.js'
+
+################################################################

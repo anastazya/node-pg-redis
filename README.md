@@ -28,3 +28,15 @@ $ curl localhost:8080
   "redis":"DOWN"
 }
 ```
+
+#### Testing image 
+
+docker run -ti -e REDIS_HOST='redis' \
+-e REDIS_PASSWORD='' \
+-e PG_HOST='postgres' \
+-e PG_USER='foobar' \
+-e PG_PASS='foobar' \
+-e PG_DB='foobar' \
+-e PORT=8080 \
+-p 8080:8080 \
+--name witness tomthecat/witness:v0.1
