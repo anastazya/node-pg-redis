@@ -1,5 +1,5 @@
 {
-    "name": "hello-world-node-pg-redis",
+    "name": "node-pg-redis",
     "version": "1.0.0",
     "description": "docker-compose up -d",
     "main": "index.js",
