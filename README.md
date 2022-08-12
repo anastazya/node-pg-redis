@@ -32,7 +32,7 @@ $ curl localhost:8080
 #### Testing image 
 
 docker run -ti -e REDIS_HOST='redis' \
--e REDIS_PASSWORD='' \
+-e REDIS_PASSWORD='radispass' \
 -e PG_HOST='postgres' \
 -e PG_USER='foobar' \
 -e PG_PASS='foobar' \
