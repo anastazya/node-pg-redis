@@ -10,6 +10,7 @@ docker-compose up -d
 ```bash
 $ curl localhost:8080
 ```
+
 ```json
 {
   "postgres":"UP",
@@ -19,6 +20,7 @@ $ curl localhost:8080
 
 ```bash
 $ docker-compose kill postgres redis
+
 $ curl localhost:8080
 ```
 
@@ -29,7 +31,7 @@ $ curl localhost:8080
 }
 ```
 
-#### Testing image 
+#### Testing image
 
 docker run -ti -e REDIS_HOST='redis' \
 -e REDIS_PASSWORD='radispass' \
